@@ -17,13 +17,10 @@ export default function Header() {
 
   return (
     <header className="w-full bg-[#020D07]">
-      {/* KHÔNG bọc container ở đây, vì trang đã có container chung */}
       <div
         className="w-full h-[80px] relative top-[2px] grid items-center"
-        // 3 cột: 95 | 1fr | 430.211 -> giống Figma, nav fill ở giữa
         style={{ gridTemplateColumns: "95px 1fr 430.211px" }}
       >
-        {/* Logo 95x48 (trái) */}
         <a href="/" className="h-12 flex items-center">
           <img
             src={logo}
@@ -33,8 +30,6 @@ export default function Header() {
             height={48}
           />
         </a>
-
-        {/* NAV ở giữa: không khoá w=662 nữa, chỉ center + gap=80 */}
         <nav className="flex justify-center">
           <ul className="flex items-center justify-center gap-[80px]">
             {NAV.map((it) => (
@@ -56,8 +51,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-
-        {/* Nhóm phải 430.211x32, gap 30 (phải) */}
         <div className="w-[430.211px] h-[32px] flex items-center justify-end gap-[30px]">
           <div className="w-[168px] h-[20px] flex items-center justify-center">
             <span className="font-[SVN-Gilroy] font-medium text-[14px] leading-[20px] text-white/90 text-center">
